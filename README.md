@@ -53,6 +53,7 @@ PS C:\Users\Devops> $PSVersionTable.PSVersion
 Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      19041  1682
-
-
 ```
+# How to create a Directory
+ new-item scripts -Type directory
+ wget -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile winrm.ps1 .\winrm.ps1
