@@ -71,8 +71,47 @@ CommandType     Name                                               Version    So
 -----------     ----                                               -------    ------
 Alias           ls -> Get-ChildItem
 ```
+## How to check what modules are loaded.
+```
+PS C:\Users\Devops> Get-Module
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Computer, Add-Content, Checkpoint-Computer, Clear-Content...}
+Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Add-Member, Add-Type, Clear-Variable, Compare-Object...}
+Binary     1.0.0.1    PackageManagement                   {Find-Package, Find-PackageProvider, Get-Package, Get-PackageProvider...}
+Script     1.0.0.1    PowerShellGet                       {Find-Command, Find-DscResource, Find-Module, Find-RoleCapability...}
+Script     2.0.0      PSReadline                          {Get-PSReadLineKeyHandler, Get-PSReadLineOption, Remove-PSReadLineKeyHandler, Set-PSReadLineKeyHandler...}
+Binary     2.1.639.0  UEV                                 {Clear-UevAppxPackage, Clear-UevConfiguration, Disable-Uev, Disable-UevAppxPackage...}
+```
+## List available Modules.
+```
+PS C:\Users\Devops> Get-Module -Listavailable
+PS C:\Users\Devops> Find-Module az
+
+Version    Name                                Repository           Description
+-------    ----                                ----------           -----------
+9.3.0      Az                                  PSGallery            Microsoft Azure PowerShell - Cmdlets to manage resources in Azure. This module is compatible wit...
+
+PS C:\Users\Devops> Get-Computerinfo
 
 
+WindowsBuildLabEx                                       : 19041.1.amd64fre.vb_release.191206-1406
+WindowsCurrentVersion                                   : 6.3
+WindowsEditionId                                        : Professional
+WindowsInstallationType                                 : Client
+WindowsInstallDateFromRegistry                          : 19-10-2022 10:41:15
+WindowsProductId                                        : 00330-80000-00000-AA799
+WindowsProductName                                      : Windows 10 Pro
+WindowsRegisteredOrganization                           :
+WindowsRegisteredOwner                                  : Devops
+WindowsSystemRoot                                       : C:\Windows
+WindowsVersion                                          : 2009
+BiosCharacteristics                                     : {7, 9, 11, 12...}
+BiosBIOSVersion                                         : {LENOVO - 1580, R0GET58W (1.58 ), Lenovo - 1580}
+BiosBuildNumber                                         :
+BiosCaption                                             : R0GET58W (1.58 )
+```
 
 
 
