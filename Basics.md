@@ -1,4 +1,7 @@
 ## Powershell Basics.
+
+## "Windows Write-HOST" is equal to echo command in Unix"
+
 ```
 PS C:\Users\Devops> help *user*
 
