@@ -59,3 +59,78 @@ Major  Minor  Build  Revision
  new-item scripts -Type directory
  wget -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile winrm.ps1 .\winrm.ps1
 ```
+## How to check Network Details
+```
+ Get-NetIPAddress
+ 
+```
+## ceck to see if server has Internet or Not
+```
+PS C:\Users\Devops> Test-NetConnection
+ComputerName           : internetbeacon.msedge.net
+RemoteAddress          : 13.107.4.52
+InterfaceAlias         : Wi-Fi
+SourceAddress          : 192.168.109.116
+PingSucceeded          : True
+PingReplyDetails (RTT) : 46 ms
+```
+## How to test a port.
+```
+PS C:\Users\Devops> Test-NetConnection windevops -Port 80                                                                                                        WARNING: TCP connect to (fe80::7a52:411a:29a2:ba8%24 : 80) failed                                                                                               WARNING: TCP connect to (192.168.56.1 : 80) failed                                                                                                             WARNING: TCP connect to (192.168.109.116 : 80) failed                                                                                                                   
+ComputerName           : windevops
+RemoteAddress          : fe80::7a52:411a:29a2:ba8%24
+RemotePort             : 80
+InterfaceAlias         : VirtualBox Host-Only Network
+SourceAddress          : fe80::7a52:411a:29a2:ba8%24
+PingSucceeded          : True
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : False
+```
+## How to Traceroute 
+```
+PS C:\Users\Devops> Test-NetConnection google.com -TraceRoute
+
+
+ComputerName           : google.com
+RemoteAddress          : 142.250.183.238
+InterfaceAlias         : Wi-Fi
+SourceAddress          : 192.168.109.116
+PingSucceeded          : True
+PingReplyDetails (RTT) : 62 ms
+TraceRoute             : 192.168.109.123
+                         0.0.0.0
+                         10.72.212.41
+                         172.25.124.208
+                         0.0.0.0
+                         0.0.0.0
+                         0.0.0.0
+                         0.0.0.0
+                         0.0.0.0
+                         0.0.0.0
+                         72.14.217.254
+                         74.125.242.129
+                         209.85.253.85
+                         142.250.183.238
+```
+## How to resolve DNS
+```
+PS C:\Users\Devops> Resolve-DnsName google.com
+
+Name                                           Type   TTL   Section    IPAddress
+----                                           ----   ---   -------    ---------
+google.com                                     AAAA   245   Answer     2404:6800:4002:810::200e
+google.com                                     A      122   Answer     142.250.182.142
+
+
+PS C:\Users\Devops> Resolve-DnsName microsoft.com
+
+Name                                           Type   TTL   Section    IPAddress
+----                                           ----   ---   -------    ---------
+microsoft.com                                  A      1387  Answer     20.81.111.85
+microsoft.com                                  A      1387  Answer     20.84.181.62
+microsoft.com                                  A      1387  Answer     20.103.85.33
+microsoft.com                                  A      1387  Answer     20.53.203.50
+microsoft.com                                  A      1387  Answer     20.112.52.29
+
+PS C:\Users\Devops>
+```
