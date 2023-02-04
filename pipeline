@@ -1,0 +1,40 @@
+## How to use pipeline in powershell
+```
+PS C:\Users\Devops> Resolve-DnsName microsoft.com 
+
+Name                                           Type   TTL   Section    IPAddress
+----                                           ----   ---   -------    ---------
+microsoft.com                                  A      3045  Answer     20.112.52.29
+microsoft.com                                  A      3045  Answer     20.81.111.85
+microsoft.com                                  A      3045  Answer     20.84.181.62
+microsoft.com                                  A      3045  Answer     20.103.85.33
+microsoft.com                                  A      3045  Answer     20.53.203.50
+
+PS C:\Users\Devops> (Resolve-DnsName microsoft.com).Name  # Look at the paranthesis(), It will execute the command in the Paranthesis first.
+microsoft.com
+microsoft.com
+microsoft.com
+microsoft.com
+microsoft.com
+```
+## Assigning Command output to a variable
+```
+PS C:\Users\Devops> $MYvar = (Resolve-DnsName microsoft.com)
+PS C:\Users\Devops> $MYvar
+
+Name                                           Type   TTL   Section    IPAddress
+----                                           ----   ---   -------    ---------
+microsoft.com                                  A      1543  Answer     20.112.52.29
+microsoft.com                                  A      1543  Answer     20.81.111.85
+microsoft.com                                  A      1543  Answer     20.84.181.62
+microsoft.com                                  A      1543  Answer     20.103.85.33
+microsoft.com                                  A      1543  Answer     20.53.203.50
+```
+# Formatting Pipeline list
+```
+Format-List
+Format-Table
+Format-wide
+Format-Custom
+Format ==> Right
+```
