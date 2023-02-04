@@ -134,3 +134,7 @@ microsoft.com                                  A      1387  Answer     20.112.52
 
 PS C:\Users\Devops>
 ```
+## Read a file, Get-Content, type,
+```
+Get-Context test1.txt 
+```
