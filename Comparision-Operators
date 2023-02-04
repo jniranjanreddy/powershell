@@ -1,0 +1,29 @@
+## How to use Comparision Operators
+```
+-eq
+-ne
+-gt
+-lt
+-ge
+-le
+-like
+-clike # for case sensitive
+-notlike
+
+PS C:\Users\Devops> 5 -eq 4
+False
+PS C:\Users\Devops> 5 -eq 5
+True
+PS C:\Users\Devops> 5 -lt 6
+True
+PS C:\Users\Devops> 5 -lt 4
+False
+
+PS C:\Users\Devops> "RAMA" -like "RAMA"
+True
+PS C:\Users\Devops> "RAMA" -clike "rama"
+False
+PS C:\Users\Devops> "RAMA" -clike "RAMA"
+True
+PS C:\Users\Devops>
+```
