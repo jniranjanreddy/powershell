@@ -75,9 +75,31 @@ TWO
 PS C:\Users\Devops> $STR[1].Length
 3
 
+PS C:\Users\Devops> $number = 1..5
+PS C:\Users\Devops> $number += 6
+PS C:\Users\Devops> $number
+1
+2
+3
+4
+5
+6
 
+PS C:\Users\Devops> $number
+one
+two
 
+threePS C:\Users\Devops> $array = @()
+PS C:\Users\Devops> $array.GETTYPE()
 
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     Object[]                                 System.Array
+
+PS C:\Users\Devops> Remove-Variable number  # without dollar symbol
+PS C:\Users\Devops> $number
+
+## Creating Empty Array
 
 
 ```
