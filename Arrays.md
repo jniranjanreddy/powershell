@@ -1,5 +1,7 @@
 ## How to use Arrays.
 ```
+PS C:\Users\Devops> $STR = 'one','Two','Three'
+
 PS C:\Users\Devops> $STR[2] | get-member
 
 
@@ -100,6 +102,33 @@ PS C:\Users\Devops> Remove-Variable number  # without dollar symbol
 PS C:\Users\Devops> $number
 
 ## Creating Empty Array
+
+
+```
+## -contains
+```
+PS C:\Users\Devops> $Array = 'one','two','Three'
+
+PS C:\Users\Devops> $Array -contains 'one'
+True
+PS C:\Users\Devops> $Array -contains 'ONE'
+True
+PS C:\Users\Devops> $Array -contains 'OnE'
+True
+
+PS C:\Users\Devops> 'ONE' -cin $Array
+False
+PS C:\Users\Devops> 'one' -cin $Array
+True
+PS C:\Users\Devops> 'one' -notin $Array
+False
+
+
+
+
+
+
+
 
 
 ```
