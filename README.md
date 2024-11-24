@@ -40,11 +40,12 @@ DESKTOP-NO... Security Update  KB5019959     NT AUTHORITY\SYSTEM  12-11-2022 00:
 DESKTOP-NO... Update           KB5016705     NT AUTHORITY\SYSTEM  20-10-2022 00:00:00       
 DESKTOP-NO... Update           KB5018506     NT AUTHORITY\SYSTEM  12-11-2022 00:00:00       
 DESKTOP-NO... Security Update  KB5003742                          19-10-2022 00:00:00 
-
-Start-Transcript
+```
+## Start-Transcript:
+Start-Transcript -Path "C:\Temp\PowerShell_transcript.txt"
 Stop-Transcript
+```
 help Get-Service -ShowWindow
-
 
 
 PS C:\Users\Devops> Get-PSReadLineKeyHandler
